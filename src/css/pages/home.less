@@ -1,13 +1,120 @@
 // out: null
 
+//COMMON 
+//==================================
+.wrapper-content{
+	position: relative;
+    margin: auto;
+    width: 1170px;
+    z-index: 0px;
+}
+.link{
+	font-family: arial;
+	font-size: 15px;
+	color: @link_color;
+}
+.title{
+	font-family: georgia;
+} 
+.title_size_S{
+	font-size: 30px; 
+}
+.title_size_M{
+	font-size: 35px; 
+}
+.title_size_L{
+	font-size: 44px; 
+}
+.text{
+	font-family: arial;
+	font-size: 15px;
+	line-height: 24px;
+	color: @font_color;
+} 
+.button{
+	padding: 20px 50px;
+	font-family: georgia;
+	font-size: 17px;
+	color: #000;
+	background-color: @second_color;
+	border:none;
+	outline: none; // ???
+	border-radius: 30px;
+	&:hover, &:focus{
+		background-color: @second_color - #333;
+	}
+}
 
-/*===========================
-Table of Content
 
-1. Slider
-===========================*/
+//FIRST SCREEN
+//====================================================
 
+.first-screen{
+	width: 100%;
+	padding-top: 60px;
+} 
+.first-screen_theme_dark{
+	background: radial-gradient(circle farthest-corner at 10px 10px, #3e3129, #151419);
+	z-index: -999;
+	color: #fff;
+}
+.bg-dog{
+	position: absolute;
+	top: 0%;
+	left: 200px;
+	width: 100%;
+	height: 100%;
+	background-image: url("../i/bg-dog.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	z-index: -998;
+}
 
+.logo_top{
+	float: left;
+}
+.logo__text{
+	font-family: georgia;
+	font-size: 32px;
+}
+.logo__text_theme_pink{
+	color: @second_color;
+}
+.logo__text-mini{
+	padding-top:10px; 
+	font-family: arial;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
 
-/* 1. Slider
-===========================*/
+.menu_top-menu{
+	text-align: right;	
+}
+.link_top-menu{
+	margin-left: 35px;
+	color: #cdcdcd;
+	transition: .5s;
+	&:hover, &:focus{
+		color: #fff;
+		text-decoration: none;
+		border-bottom: 3px solid @second_color;
+	}
+}
+
+.description{
+	clear: both;
+	width: 450px;
+}
+.description_first-screen{
+	padding: 250px 0;
+}
+
+.text_description{
+	padding: 45px 0;
+}
+.text_theme_light{
+	color: #cdcdcd;
+}
+
+//END
+//====================================================
