@@ -17,7 +17,7 @@
 	font-family: georgia;
 } 
 .title_size_S{
-	font-size: 30px; 
+	font-size: 20px; 
 }
 .title_size_M{
 	font-size: 35px; 
@@ -26,6 +26,16 @@
 .title_size_L{
 	font-size: 44px; 
 	line-height: 57px;
+}
+.title__svg-icon{
+	width: 40px;
+	position: absolute;
+	top: 5px;
+	left: 0px;
+}
+.title_for_svg-icon{
+	position: relative;
+	padding:20px 10px 20px 60px;
 }
 .text{
 	font-family: arial;
@@ -38,6 +48,7 @@
 	text-align: center;
 }
 .button{
+	position: relative;
 	padding: 20px 50px;
 	font-family: georgia;
 	font-size: 17px;
@@ -50,35 +61,45 @@
 		background-color: @second_color - #333;
 	}
 }
+.button__svg-icon{
+	width: 30px;
+	position: absolute;
+	top:10px;
+	left:15px;
+}
 .section{
 	padding: 80px 0;
+	min-width: 1170px;
 }
 .section_theme_gray{
 	background-color: #f6f6f6;
+	background-size: 100% 100%;
 }
-
-
-//FIRST SCREEN
-//====================================================
-
-.first-screen{
-	width: 100%;
-	padding-top: 60px;
-} 
-.first-screen_theme_dark{
+.section_theme_dark{
 	background: radial-gradient(circle farthest-corner at 10px 10px, #3e3129, #151419);
 	z-index: -999;
 	color: #fff;
+	background-size: 100% 100%;
 }
+.section_text_transform{
+	padding-left: 585px;
+	padding-right: 170px;
+}
+
+//FIRST SCREEN
+//====================================================
+.section_first-screen{
+	padding-bottom: 0;
+	padding-top: 60px;
+} 
 .bg-dog{
 	position: absolute;
 	top: 0%;
-	left: 200px;
 	width: 100%;
 	height: 100%;
 	background-image: url("../i/bg-dog.png");
 	background-repeat: no-repeat;
-	background-position: right bottom;
+	background-position: 115% 100%;
 	z-index: -998;
 }
 
@@ -134,15 +155,14 @@
 // ABOUT
 //====================================================
 
-
+.section-white-about{
+	padding-top: 115px;
+	padding-bottom: 100px;
+}
 .section-white-about_content{
 	background-image: url("../i/bg-pets.png");
 	background-repeat: no-repeat;
-	background-position: 200px 90px;
-	padding-left: 585px;
-	padding-top: 115px;
-	padding-bottom: 100px;
-	padding-right: 170px;
+	background-position: 200px 0px;
 }
 
 //END
@@ -152,5 +172,113 @@
 //====================================================
 .slider{
 	padding: 50px;
+	position: relative;
+}
+.slider__list_wrap{
+	width: 900px;
+	margin: auto;
+	overflow: hidden;
+}
+.slider__list{
+	width: 900px;
+	position: relative;
+	transition: 0.3s;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+
+}
+.slider__item{
+	float: left;
+}
+.slider__controls-button{
+	position: absolute;
+	top: 100px;
+}
+.slider__controls-button_next{
+	right: 100px;
+}
+.slider__controls-button_prev{
+	left: 100px;
 }
 
+.slider__box-slider{
+	background-color: #fff;
+	padding: 15px;
+	width: 270px;
+	&:hover,&:focus{
+		box-shadow: 0px 0px 5px #ccc;
+	}
+}
+
+//END
+//====================================================
+
+// HELP
+//====================================================
+.flex-box{
+	padding: 40px 0 20px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.title_flex-box{
+	padding: 20px;
+}
+.svg-icon-help{
+	width: 50px;
+}
+
+//END
+//====================================================
+
+// DONATE
+//====================================================
+.button_theme_credit{
+	border-radius: 10px;
+	padding: 15px 15px 15px 60px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	
+}
+
+.title_theme_credit{
+	font-size: 15px;
+	padding: 30px 0 15px;
+	letter-spacing: 1px;
+}
+.section_theme_credit{
+	background-image: url("../i/bg-dog-credit.png");
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.text_theme_credit{
+	font-style: italic;
+	color: #b2b2b2;
+}
+
+//END
+//====================================================
+
+// FOOTER
+//====================================================
+
+.title_theme_footer{
+	font-family: "Times New Roman", Times, serif;
+	color:@second_color;
+}
+.content-box_theme_footer-dog{
+	flex-grow: 0.5;
+}
+.bg-dog-footer{
+	top:-12px;
+	width: 300px;
+	height: 350px;
+	position: absolute;
+	background-image: url("../i/bg-dog-footer.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+//END
+//====================================================
